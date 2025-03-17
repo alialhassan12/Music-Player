@@ -25,6 +25,9 @@ song.onloadmetadata=function(){
     progress.max=song.duration;
     progress.value=song.currentTime;
 }
+song.onended=function(){
+    next();
+}
 ctrlContainer.onclick=function(){
     if(ctrlIcon.classList.contains('fa-pause')){
         song.pause();
@@ -89,7 +92,9 @@ Array.from(songElement).forEach((e)=>{
 });
 let nextBtn=document.querySelector('#nextBtn');
 let prevBtn=document.querySelector('#prevBtn');
-nextBtn.onclick=function(){
+nextBtn.addEventListener('click',next);
+prevBtn.addEventListener('click',prev);
+function next(){
     currentSongIndex++;
     if(currentSongIndex>music.length-1){
         currentSongIndex=0;
@@ -106,7 +111,7 @@ nextBtn.onclick=function(){
     ctrlIcon.classList.remove('fa-play');
     ctrlIcon.classList.add('fa-pause');
 }
-prevBtn.onclick=function(){
+function prev(){
     currentSongIndex--;
     if(currentSongIndex<0){
         currentSongIndex=music.length-1;
