@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4ded69fc87.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <aside class="sidebar hide">
+        <div class="logo">Music Player</div>
+
+    </aside>
+    <div class="container">
+        <div class="musicPlayer">
+            <nav class="btns">
+                <div class="circle">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </div>
+                <div class="circle" id="sideBtn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+            <div class="music">
+                <img class="songImg" src="posters/ajmal sake.jpg" >
+                <div class="musicInfo">
+                    <h2 class="name">Ajmal Sake</h2>
+                    <p class="artist">Abbas Ajed alaameri</p>
+                </div>
+                <audio class="song">
+                    <source src="audio/اجمل ساقي __ عباس عجيد العامري __ موكب وحسينية.mp3">
+                </audio>
+                <input type="range" value="0" class="musicRange">
+                <div class="controls">
+                    <div class="circle"><i class="fa-solid fa-backward"></i></div>
+                    <div class="circle" id="ctrlContainer" ><i class="fa-solid fa-play " id="ctrlIcon"></i></div>
+                    <div class="circle"><i class="fa-solid fa-forward"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
